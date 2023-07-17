@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { ThirdwebProvider, useSwitchChain, ConnectWallet } from "@thirdweb-dev/react";
 import { Goerli } from "@thirdweb-dev/chains";
 import LiveCodeEditor from "../../LiveCodeEditor";
+import styles from "../../../styles/Home.module.css"
 
-const scope = { React, Goerli, ThirdwebProvider, useSwitchChain, ConnectWallet, useState };
+const scope = { React, Goerli, ThirdwebProvider, useSwitchChain, ConnectWallet, useState, styles };
 
 const code = `function App() {
   const switchChain = useSwitchChain();
@@ -17,9 +18,11 @@ const code = `function App() {
   return (
     <div>
       {!isConnected && (
-        <button onClick={handleSwitchChain}>
+        <div className={styles.btnContainer}>
+        <div className={styles.btn} onClick={handleSwitchChain}>
           Switch to Goerli
-        </button>
+        </div>
+        </div>
       )}
 
       {isConnected && <ConnectWallet />}
