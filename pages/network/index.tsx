@@ -11,10 +11,10 @@ const Network: NextPage = () => {
         <h2>useChainId</h2>
         </a>
         <UseChainId />
-        <a href="https://portal.thirdweb.com/react/react.usenetworkmismatch" target="_blank">
+        {/* <a href="https://portal.thirdweb.com/react/react.usenetworkmismatch" target="_blank">
         <h2>useNetworkMismatch</h2>
         </a>
-        <UseNetworkMismatch />
+        <UseNetworkMismatch /> */}
         <a href="https://portal.thirdweb.com/react/react.useSwitchChain" target="_blank">
           <h2>useSwitchChain</h2>
         </a>
