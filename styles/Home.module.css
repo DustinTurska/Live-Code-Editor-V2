@@ -13,17 +13,29 @@
   align-items: center;
 }
 
+.btnContainer{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn {
-  background-color: var(--tw-color1);
+  background-color: #fafafa;
   outline: none;
   border: none;
-  color: var(--white);
-  height: 48px;
-  padding: 0 24px;
-  border-radius: 999px;
+  color: #000000;
+  width: 175px;
+  height: 45px;
+  border-radius: 8px;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   transition: background-color 300ms ease-in-out;
   transform-origin: center;
