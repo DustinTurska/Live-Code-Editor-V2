@@ -12,6 +12,7 @@ import UseCancelOffer from "../../live-code/snippets/marketplace/UseCancelOffer"
 import UseCollectAuctionPayout from "../../live-code/snippets/marketplace/UseCollectAuctionPayout";
 import UseCollectAuctionTokens from "../../live-code/snippets/marketplace/UseCollectAuctionTokens";
 import UseApproveBuyerForListing from "../../live-code/snippets/marketplace/UseApproveBuyerForListing";
+import UseValidDirectListings from "../../live-code/snippets/marketplace/useValidDirectListings";
 const Metadata: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -30,14 +31,26 @@ const Metadata: NextPage = () => {
         <UseCreateListing />
         <h2>useUpdateListing</h2>
         <UseUpdateListing />
+        <a href="https://portal.thirdweb.com/typescript/sdk.directlistings#approvebuyerforreservedlisting" target="_blank">
         <h2>useApproveBuyerForListing</h2>
+        </a>
         <UseApproveBuyerForListing />
+        <a href="https://portal.thirdweb.com/react/react.usemakeoffer" target="_blank">
         <h2>useMakeOffer</h2>
+        </a>
         <UseMakeOffer />
+        <a href="https://portal.thirdweb.com/typescript/sdk.offers#canceloffer" target="_blank">
         <h2>useCancelOffer</h2>
+        </a>
         <UseCancelOffer />
+        <a href="https://portal.thirdweb.com/typescript/sdk.offers#acceptoffer" target="_blank">
         <h2>useAcceptOffer</h2>
+        </a>
         <UseAcceptOffer />
+        <a href="https://portal.thirdweb.com/react/react.usevaliddirectlistings" target="_blank">
+        <h2>useValidDirectListing</h2>
+        </a>
+        <UseValidDirectListings/>
       </main>
     </div>
   );

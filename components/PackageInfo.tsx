@@ -30,7 +30,7 @@ export function PackageInfo() {
         ))}
       </ul> */}
 
-      <h3>Dependencies</h3>
+      <h3>Latest Versions</h3>
       <ul>
         {Object.entries(dependencies).map(([dependency, version]) => (
           <li key={dependency}>

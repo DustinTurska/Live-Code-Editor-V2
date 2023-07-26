@@ -10,6 +10,7 @@ import UseTransferNFT from "../../live-code/snippets/nfts/UseTransferNFT";
 import UseLazyMint from "../../live-code/snippets/nfts/nftdrops/UseLazyMint";
 import UseClaimNFT from "../../live-code/snippets/nfts/nftdrops/UseClaimNFT";
 import UseUnclaimedNFTs from "../../live-code/snippets/nfts/nftdrops/UseUnclaimedNFTs";
+import UseGetApproved from "../../live-code/snippets/nfts/UseGetApproved";
 const NFTs: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -56,6 +57,8 @@ const NFTs: NextPage = () => {
         <h2>useNFTBalance</h2>
         </a>
         <UseNFTBalance />
+        <h2>useGetApproved</h2>
+        <UseGetApproved />
       </main>
     </div>
   );

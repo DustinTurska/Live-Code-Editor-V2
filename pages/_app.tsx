@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThirdwebProvider 
         activeChain={selectedChain}
         supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect()]}
+        clientId={process.env.CLIENTID}
         >
         <Navbar />
         <Component {...pageProps} />
