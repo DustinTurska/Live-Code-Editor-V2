@@ -5,8 +5,8 @@ const EVM: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h2>Verify Contract</h2>
-        <VerifyContract />
+        {/* <h2>Verify Contract</h2>
+        <VerifyContract /> */}
       </main>
     </div>
   );
