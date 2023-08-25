@@ -1,6 +1,23 @@
 import { useState } from "react";
 import ChainContext from "../context/Chain";
-import { ThirdwebProvider, coinbaseWallet, magicLink, metamaskWallet, paperWallet, rainbowWallet, safeWallet, walletConnect } from "@thirdweb-dev/react";
+import {
+  ThirdwebProvider,
+  ConnectWallet,
+  metamaskWallet,
+  coinbaseWallet,
+  walletConnect,
+  safeWallet,
+  smartWallet,
+  localWallet,
+  paperWallet,
+  trustWallet,
+  zerionWallet,
+  bloctoWallet,
+  magicLink,
+  frameWallet,
+  rainbowWallet,
+} from "@thirdweb-dev/react";
+
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import styles from "../styles/Home.module.css"
 import React from "react";
@@ -29,10 +46,51 @@ function LiveCodeEditor({ code, additionalScope }: Props) {
 
   return (
     <ChainContext.Provider value={{ selectedChain, setSelectedChain }}>
-      <ThirdwebProvider 
-        activeChain={selectedChain}
-        supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect()]}
-        >
+      <ThirdwebProvider
+        clientId={process.env.NEXT_PUBLIC_THIRDWEB_CLIENTID}
+        supportedWallets={[
+          metamaskWallet(),
+          coinbaseWallet(),
+          walletConnect(),
+          safeWallet({
+            personalWallets: [
+              metamaskWallet(),
+              coinbaseWallet(),
+              walletConnect(),
+            ],
+          }),
+          smartWallet({
+            factoryAddress: "YOUR_FACTORY_ADDRESS",
+            gasless: true,
+            personalWallets: [
+              metamaskWallet(),
+              coinbaseWallet(),
+              walletConnect(),
+            ],
+          }),
+          localWallet(),
+          paperWallet({
+            paperClientId: "YOUR_PAPER_CLIENT_ID",
+          }),
+          trustWallet(),
+          zerionWallet(),
+          bloctoWallet(),
+          magicLink({
+            apiKey: "YOUR_MAGIC_API_KEY",
+            oauthOptions: {
+              providers: [
+                "google",
+                "facebook",
+                "twitter",
+                "apple",
+              ],
+            },
+          }),
+          frameWallet(),
+          rainbowWallet(),
+        ]}
+      >
+      <ConnectWallet />
         <LiveProvider
           code={code}
           scope={{

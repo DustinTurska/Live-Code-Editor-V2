@@ -1,8 +1,39 @@
 import React from "react";
 import LiveCodeEditor from "../../LiveCodeEditor";
-import { ConnectWallet } from "@thirdweb-dev/react";
+import {
+  ThirdwebProvider,
+  ConnectWallet,
+  metamaskWallet,
+  coinbaseWallet,
+  walletConnect,
+  safeWallet,
+  smartWallet,
+  localWallet,
+  paperWallet,
+  trustWallet,
+  zerionWallet,
+  bloctoWallet,
+  magicLink,
+  frameWallet,
+  rainbowWallet,
+} from "@thirdweb-dev/react";
 
-const scope = { ConnectWallet };
+const scope = { 
+  ThirdwebProvider,
+  ConnectWallet,
+  metamaskWallet,
+  coinbaseWallet,
+  walletConnect,
+  safeWallet,
+  smartWallet,
+  localWallet,
+  paperWallet,
+  trustWallet,
+  zerionWallet,
+  bloctoWallet,
+  magicLink,
+  frameWallet,
+  rainbowWallet, };
 
 const code = `<ConnectWallet
   theme="dark"

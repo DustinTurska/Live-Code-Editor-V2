@@ -2,6 +2,34 @@
   padding: 0 2rem;
 }
 
+.gradient-text-0 {
+  background: -webkit-linear-gradient(#bfa3da, #84309c, #c735b0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-1 {
+  background: -webkit-linear-gradient(#a79af9, #7aa8d2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-2 {
+  background: -webkit-linear-gradient(#bfa3da, #743f93);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-3 {
+  background: -webkit-linear-gradient(#c35ab1, #e9a8d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .main {
   min-height: 100vh;
   margin-top: 35px;
@@ -50,12 +78,17 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
+  text-decoration-color: #84309c;
 }
 
 .title {
   line-height: 1.15;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: left;
 }
 
 .title,
@@ -93,7 +126,7 @@
 }
 
 .card {
-  background-color: #1b2129;
+  background-color: #131417;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -190,4 +223,18 @@
   text-decoration: none;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-left: 0;
+  }
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
 }
