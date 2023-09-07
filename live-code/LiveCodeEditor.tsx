@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ChainContext from "../context/Chain";
+import { Dogechain, Ethereum, Polygon, Mumbai, Goerli, Base, BaseGoerli } from "@thirdweb-dev/chains"
 import {
   ThirdwebProvider,
   ConnectWallet,
@@ -48,6 +49,8 @@ function LiveCodeEditor({ code, additionalScope }: Props) {
     <ChainContext.Provider value={{ selectedChain, setSelectedChain }}>
       <ThirdwebProvider
         clientId={process.env.NEXT_PUBLIC_THIRDWEB_CLIENTID}
+        activeChain={selectedChain}
+        supportedChains={[Dogechain, Ethereum, Polygon, Mumbai, Goerli, Base, BaseGoerli]}
         supportedWallets={[
           metamaskWallet(),
           coinbaseWallet(),
@@ -106,6 +109,8 @@ function LiveCodeEditor({ code, additionalScope }: Props) {
                 className={styles.chainSelector}
               >
                 <option value="ethereum">Ethereum</option>
+                <option value="base">Base</option>
+                <option value="base-goerli">Base Goerli</option>
                 <option value="polygon">Polygon</option>
                 <option value="mumbai">Mumbai</option>
                 <option value="goerli">Goerli</option>
