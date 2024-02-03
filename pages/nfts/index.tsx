@@ -16,7 +16,7 @@ const NFTs: NextPage = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <a href="https://portal.thirdweb.com/react/react.usenft" target="_blank">
-        <h2>useNFT</h2>
+        <h2>useNFTTest</h2>
         </a>
         <UseNFTHook />
         <a href="https://portal.thirdweb.com/react/react.useownednfts" target="_blank">
