@@ -33,3 +33,7 @@ You can check out [the thirdweb GitHub organization](https://github.com/thirdweb
 ## Join our Discord!
 
 For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+
+## Earn a thirdweb Contribution NFT for PR's to this repo!
+
+Earn an NFT for each PR created to this repo. Simply add your wallet address in the description of the PR and receive an NFT automatically!
